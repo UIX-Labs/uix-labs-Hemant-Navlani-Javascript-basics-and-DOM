@@ -67,9 +67,32 @@ form.addEventListener('submit',function(e){
     allSlamArray.push(formValue)
     console.log(formValue)
 console.log(allSlamArray)
-
-
+showSlamList();
 })
+
+function showSlamList(){
+    const allSlams = document.querySelector('.allSlams')
+    allSlamArray.forEach((element)=>{
+            allSlams.innerHTML += `<div class="card">
+<p>My name in your contact is <span class="answer">${element.contactName}</span></p>
+<p>Relationship between us is <span class="answer">${element.relationship}</span></p>
+<p>Something you like in me is <span class="answer">${element.likeInMe}</span></p>
+<p>Something you hate in me is <span class="answer">${element.hateInMe}</span></p>
+<p>If I die what would be your reaction?</p>
+<p><span class="answer">${element.deadReaction}</span></p>
+<p>What did you feel when you first saw me?</p>
+<p><span class="answer">${element.firstImpression}</span></p>
+<p>A beautiful message for me?</p>
+<p><span class="answer">${element.beautifulMessage}</span></p>
+<p>A nickname for me is <span class="answer">${element.nickname}</span></p>
+<p>A song you want to dedicate to me is <span class="answer">${element.songForMe}</span></p>
+<p>Can I share your opinion in my status?</p>
+<p><span class="answer">${element.shareOpinion}</span></p>
+</div>`
+    })
+
+}
+
  
 //Write your code above
 
